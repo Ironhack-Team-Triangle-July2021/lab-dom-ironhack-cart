@@ -7,6 +7,10 @@ function updateSubtotal(product) {
   const priceValue = parseFloat(price.innerText);
   const quantityValue = parseInt(quantity.value);
 
+  const subTotal = product.querySelector('.subtotal span')
+  const subTotalValue = priceValue * quantityValue
+  subTotal.innerText = subTotalValue
+  return subTotalValue
 }
 
 function calculateAll() {
